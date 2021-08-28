@@ -1,7 +1,4 @@
-
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide  } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -21,11 +18,26 @@ SwiperCore.use([Pagination,Navigation]);
 export default function ContinentCarousel() {
   return (
     <>
-    <Swiper slidesPerView={1} spaceBetween={30} loop={true} pagination={{
-  "clickable": true
-}} navigation={true} className="mySwiper">
-  <SwiperSlide>Slide 1</SwiperSlide><SwiperSlide>Slide 2</SwiperSlide><SwiperSlide>Slide 3</SwiperSlide><SwiperSlide>Slide 4</SwiperSlide><SwiperSlide>Slide 5</SwiperSlide><SwiperSlide>Slide 6</SwiperSlide><SwiperSlide>Slide 7</SwiperSlide><SwiperSlide>Slide 8</SwiperSlide><SwiperSlide>Slide 9</SwiperSlide>
-  </Swiper>
+      <Swiper 
+        slidesPerView={1}
+        spaceBetween={30} 
+        loop={true} 
+        pagination={{"clickable": true}}
+        navigation={true}
+        style={{
+          textAlign: "center",
+          height: "28.125rem",
+          width: "77.5rem",
+          color: "yellow.500"
+        }}
+      >
+        <SwiperSlide>América do Norte</SwiperSlide>
+        <SwiperSlide>América do Sul</SwiperSlide>
+        <SwiperSlide>Ásia</SwiperSlide>
+        <SwiperSlide>África</SwiperSlide>
+        <SwiperSlide>Europa</SwiperSlide>
+        <SwiperSlide>Oceania</SwiperSlide>
+      </Swiper>
     </>
   )
 }

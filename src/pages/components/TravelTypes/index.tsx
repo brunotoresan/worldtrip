@@ -1,4 +1,4 @@
-import { HStack, Box, useBreakpointValue } from '@chakra-ui/react'
+import { HStack, Box, Text, useBreakpointValue } from '@chakra-ui/react'
 import { TravelTypeImage } from './TravelTypeImage'
 import { List } from "@chakra-ui/react"
 import { TravelTypeListItem } from './TravelTypeListItem'
@@ -42,6 +42,16 @@ export function TravelTypes(){
           <Box width="60px" mt="36px" mb="24px" mx="auto" border="1px solid #47585B"/>
         </>
       )}
+      <Box 
+        textAlign="center" 
+        mb={["20px", "52px"]}
+        fontSize={["1.25rem", "2.25rem"]}
+        fontWeight="500"
+        color="gray.700"
+      >
+        <Text>Vamos nessa?</Text>
+        <Text>Então escolha seu continente</Text>
+      </Box>
     </>
   )
 }

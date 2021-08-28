@@ -11,6 +11,9 @@ import SwiperCore, {
   Pagination,Navigation
 } from 'swiper';
 
+import { Text, Image, Flex, Box } from "@chakra-ui/react";
+import { Slide } from './Slide'
+
 // install Swiper modules
 SwiperCore.use([Pagination,Navigation]);
 
@@ -28,14 +31,20 @@ export default function ContinentCarousel() {
           textAlign: "center",
           height: "28.125rem",
           width: "77.5rem",
-          color: "yellow.500"
+          marginBottom: "4rem"
         }}
       >
         <SwiperSlide>América do Norte</SwiperSlide>
         <SwiperSlide>América do Sul</SwiperSlide>
         <SwiperSlide>Ásia</SwiperSlide>
         <SwiperSlide>África</SwiperSlide>
-        <SwiperSlide>Europa</SwiperSlide>
+        <SwiperSlide>
+          <Slide 
+            continentImage="/images/continents/europe.png"
+            continentName="Europa"
+            continentSlogan="O continente mais antigo." 
+          />
+        </SwiperSlide>
         <SwiperSlide>Oceania</SwiperSlide>
       </Swiper>
     </>

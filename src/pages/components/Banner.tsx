@@ -27,14 +27,17 @@ export function Banner(){
         position="absolute" 
         top="0" 
         left="0"
-        mt={["1.5rem", "1.5rem", "2rem", "2rem", "5rem", "8rem"]}
-        ml={["0.75rem", "1.5rem", "1.75rem", "1.75rem", "8.75rem", "18rem"]}   
+        mt={["1.5rem", null, "2rem", "2rem", "5rem", "8rem"]}
+        ml={["0.75rem", null, "1.75rem", "1.75rem", "8.75rem", "18rem"]}   
       >
-        <Text color="gray.50">
+        <Text 
+          // color={["red", "blue", "yellow", "green", "purple", "gray.50"]}
+          color="gray.50"
+        >
           5 Continentes,<br/>infinitas possibilidades.
         </Text>
         <Text
-          mt={["1rem", null, null, "1.25rem"]}
+          mt={["1rem", "1.25rem"]}
           fontWeight="400"
           fontSize={["0.875rem", "1.25rem"]}
           color="gray.200"

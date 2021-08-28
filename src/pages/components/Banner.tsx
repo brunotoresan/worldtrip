@@ -30,9 +30,7 @@ export function Banner(){
         mt={["1.5rem", "1.5rem", "2rem", "2rem", "5rem", "8rem"]}
         ml={["0.75rem", "1.5rem", "1.75rem", "1.75rem", "8.75rem", "18rem"]}   
       >
-        <Text
-          color={["red", "blue", "yellow", "green", "purple", "gray.50"]}
-        >
+        <Text color="gray.50">
           5 Continentes,<br/>infinitas possibilidades.
         </Text>
         <Text

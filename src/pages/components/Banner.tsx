@@ -28,6 +28,7 @@ export function Banner(){
         </Box>
         <Image
           src='/images/airplane.svg'
+          w={["300px","300px","300px","430px"]}
           display={['none', 'none', 'block']}
           transform='translateY(4rem)'
         />

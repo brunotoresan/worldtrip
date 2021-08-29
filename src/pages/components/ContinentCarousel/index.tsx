@@ -1,52 +1,39 @@
 import { Swiper, SwiperSlide  } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-
-
-// import Swiper core and required modules
-import SwiperCore, {
-  Pagination,Navigation
-} from 'swiper';
-
-import { Text, Image, Flex, Box } from "@chakra-ui/react";
+import SwiperCore, { Pagination,Navigation } from 'swiper';
 import { Slide } from './Slide'
+import { Flex } from "@chakra-ui/react";
 
-// install Swiper modules
 SwiperCore.use([Pagination,Navigation]);
-
 
 export default function ContinentCarousel() {
   return (
     <>
-      <Swiper 
-        slidesPerView={1}
-        spaceBetween={30} 
-        loop={true} 
-        pagination={{"clickable": true}}
-        navigation={true}
-        style={{
-          textAlign: "center",
-          height: "28.125rem",
-          width: "77.5rem",
-          marginBottom: "4rem"
-        }}
-      >
-        <SwiperSlide>América do Norte</SwiperSlide>
-        <SwiperSlide>América do Sul</SwiperSlide>
-        <SwiperSlide>Ásia</SwiperSlide>
-        <SwiperSlide>África</SwiperSlide>
-        <SwiperSlide>
-          <Slide 
-            continentImage="/images/continents/europe.png"
-            continentName="Europa"
-            continentSlogan="O continente mais antigo." 
-          />
-        </SwiperSlide>
-        <SwiperSlide>Oceania</SwiperSlide>
-      </Swiper>
+      <Flex w='100%' h={['250px', '450px']} maxW='1240px' mx='auto' mb={["1.5rem", "2.5rem"]}>
+        <Swiper 
+          slidesPerView={1}
+          loop={true} 
+          pagination={{"clickable": true}}
+          navigation={true}
+          autoplay={{delay:4000}}
+          style={{
+            width: '100%',
+            flex: '1'
+          }}
+        >
+          <SwiperSlide>América do Norte</SwiperSlide>
+          <SwiperSlide>América do Sul</SwiperSlide>
+          <SwiperSlide>Ásia</SwiperSlide>
+          <SwiperSlide>África</SwiperSlide>
+          <SwiperSlide>
+            <Slide 
+              continentImage="/images/continents/europe.png"
+              continentName="Europa"
+              continentSlogan="O continente mais antigo." 
+            />
+          </SwiperSlide>
+          <SwiperSlide>Oceania</SwiperSlide>
+        </Swiper>
+      </Flex>
     </>
   )
 }

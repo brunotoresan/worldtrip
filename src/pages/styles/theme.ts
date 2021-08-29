@@ -19,28 +19,6 @@ export const theme = extendTheme({
   styles: {
     global: {
       bg: 'gray.50',
-      ".swiper-button-next, .swiper-button-prev": { 
-        color: 'yellow.500'
-      },
-      ".swiper-button-next::after, .swiper-button-prev::after": { 
-        color: 'yellow.500'
-      },
-      ".swiper-pagination-bullet": {
-        background: 'gray.300',
-        width: '1rem',
-        height: '1rem'
-      },          
-      ".swiper-pagination-bullet-active": {
-        background: 'yellow.500',
-        width: '1rem',
-        height: '1rem'
-      },
-      ".swiper-slide img": {
-        display: "block",
-        width: "100%",
-        height: "100%",
-        fit: "cover"
-      }
-    },
+    }
   }
 })

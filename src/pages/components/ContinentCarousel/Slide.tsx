@@ -1,18 +1,4 @@
-import { Swiper, SwiperSlide  } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination"
-import "swiper/css/navigation"
-
-
-// import Swiper core and required modules
-import SwiperCore, {
-  Pagination,Navigation
-} from 'swiper';
-
-import { Text, Image, Flex, Box } from "@chakra-ui/react";
-
+import { Text, Flex, Heading } from "@chakra-ui/react";
 
 interface SlideProps {
   continentImage: string
@@ -22,16 +8,21 @@ interface SlideProps {
 
 export function Slide({continentImage, continentName, continentSlogan}: SlideProps){
   return (
-    <Flex position="relative">
-      <Image src={continentImage}/>
-      <Box position="absolute" left="50%" top="50%" transform="translate(-50%, -50%)">
-        <Text color="gray.50" fontWeight="700" fontSize="3rem">
-          {continentName}
-        </Text>
-        <Text mt="1rem" fontSize="1.5rem" fontWeight="700" color="gray.200">
-          {continentSlogan}
-        </Text>
-      </Box>
+    <Flex
+      w='100%'
+      h='100%'
+      bgImage={`url(${continentImage})`}
+      align='center'
+      justify='center'
+      direction='column'
+      bgSize="cover"
+    >
+      <Heading color="gray.50" fontWeight="700" fontSize={["1.5rem", "3rem"]}>
+        {continentName}
+      </Heading>
+      <Text mt={["0.75rem", "1rem"]} fontSize={["0.875rem", "1.5rem"]} fontWeight="700" color="gray.200">
+        {continentSlogan}
+      </Text>
     </Flex>
   )
 }

@@ -1,60 +1,38 @@
-import { Box, Flex, Image, Text, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Flex, Image, Text, Heading } from "@chakra-ui/react"
 
 export function Banner(){
 
-  const isWideVersion = useBreakpointValue({
-    sm: false,
-    md: false,
-    lg: false,
-    xl: true
-  })
-
-  const shouldHaveAirplaine = useBreakpointValue({
-    sm: false,
-    md: false,
-    lg: false,
-    xl: true
-  })
-
-  const logoImage = isWideVersion ? '/images/nightSky/lg.png' : '/images/nightSky/base.png'
-
   return (
-    <Flex position="relative" justifyContent="center">
-      <Image width="100%" display="block" src={logoImage} fit="contain"/>
-      <Box
-        fontWeight="500"
-        fontSize={["1.25rem", "1.75rem", null, "2rem"]}
-        position="absolute" 
-        top="0" 
-        left="0"
-        mt={["1.5rem", null, "2rem", "2rem", "5rem", "8rem"]}
-        ml={["0.75rem", null, "1.75rem", "1.75rem", "8.75rem", "18rem"]}   
-      >
-        <Text 
-          // color={["red", "blue", "yellow", "green", "purple", "gray.50"]}
-          color="gray.50"
-        >
-          5 Continentes,<br/>infinitas possibilidades.
-        </Text>
-        <Text
-          mt={["1rem", "1.25rem"]}
-          fontWeight="400"
-          fontSize={["0.875rem", "1.25rem"]}
-          color="gray.200"
-        >
-          Chegou a hora de tirar do papel a viagem que você {isWideVersion && <br/>} sempre sonhou. 
-        </Text>
-      </Box>
-
-      { shouldHaveAirplaine && 
+    <Flex 
+      w='100%' 
+      h={['163px', '250px', '250px', '368px']} 
+      bgImage="url('/images/nightSky.jpg')"
+      bgPosition={["100% 20%","100% 20%","100% 30%"]}
+      bgRepeat="no-repeat"
+      bgSize="cover"
+    >
+      <Flex justify={['center', 'space-between']} align='center' w='100%' mx='auto' px={["4","10","15","20","36"]}>
+        <Box>
+          <Heading color="gray.50" fontWeight="500" fontSize={["xl", "2xl", "2xl", "4xl"]}>
+            5 Continentes,<br/>infinitas possibilidades.
+          </Heading>
+          <Text
+            mt={["1rem", "1.25rem"]}
+            fontWeight="400"
+            fontSize={["0.875rem", "1.25rem"]}
+            maxW={["100%", "100%", "100%", "550px"]}
+            color="gray.200"
+          >
+            Chegou a hora de tirar do papel a viagem que você sempre sonhou. 
+          </Text>
+        </Box>
         <Image
-          src='/images/airplane.png'
-          position="absolute" 
-          top="0" 
-          right="0"
-          transform={[null, null, null, null, "translate(-30%, 30%)", "translate(-70%, 70%)"]}
+          src='/images/airplane.svg'
+          display={['none', 'none', 'block']}
+          transform='translateY(4rem)'
         />
-      }
+      </Flex>
+
     </Flex>
   )
 }

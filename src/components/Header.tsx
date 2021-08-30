@@ -20,7 +20,7 @@ export function Header(){
             <Icon as={RiArrowLeftSLine} fontSize={[20,40]} ml={["1rem", "0rem"]} cursor="pointer" justifySelf="start" />
           </Link>
         }
-        <Image w={["81px","184px"]} src='/images/logo.svg' justifySelf="center" />
+        <Image w={["81px","184px"]} src='/images/logo.svg' justifySelf="center" gridColumn="2" />
       </Grid>
     </Center>
   )

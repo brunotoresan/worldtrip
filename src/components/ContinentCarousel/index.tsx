@@ -18,17 +18,16 @@ export default function ContinentCarousel() {
           loop={true} 
           pagination={{"clickable": true}}
           navigation={true}
-          autoplay={{delay:4000}}
           style={{
             width: '100%',
             flex: '1'
           }}
         >
           {continents.map(continent => (
-            <SwiperSlide>
+            <SwiperSlide key={continent.slug}>
               <Slide
-                key={continent.slug}
                 continentImage={continent.sliderImage}
+                continentSlug={continent.slug}
                 continentName={continent.name}
                 continentSlogan={continent.slogan} 
               />

@@ -9,7 +9,6 @@ interface City {
 }
 
 interface Continent {
-  id: number,
   slug: string,
   sliderImage: string,
   name: string,

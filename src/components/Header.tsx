@@ -1,4 +1,4 @@
-import { Flex, Image, Icon, Grid, Center } from "@chakra-ui/react";
+import { Image, Icon, Grid, Center } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
 import { RiArrowLeftSLine } from 'react-icons/ri';

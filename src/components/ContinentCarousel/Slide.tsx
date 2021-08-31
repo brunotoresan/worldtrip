@@ -3,13 +3,14 @@ import Link from "next/link";
 
 interface SlideProps {
   continentImage: string
+  continentSlug: string
   continentName: string
   continentSlogan: string
 }
 
-export function Slide({continentImage, continentName, continentSlogan}: SlideProps){
+export function Slide({continentImage, continentSlug, continentName, continentSlogan}: SlideProps){
   return (
-    <Link href={`/continent/${continentName.toLowerCase()}`} passHref>
+    <Link href={`/continent/${continentSlug.toLowerCase()}`} passHref>
       <Flex
         w='100%'
         h='100%'

@@ -26,7 +26,7 @@ export default function ContinentCarousel() {
           <SwiperSlide>África</SwiperSlide>
           <SwiperSlide>
             <Slide 
-              continentImage="/images/continents/europe.png"
+              continentImage="/images/continents/europe/europe.png"
               continentName="Europa"
               continentSlogan="O continente mais antigo." 
             />

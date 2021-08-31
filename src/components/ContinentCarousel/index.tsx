@@ -9,7 +9,6 @@ SwiperCore.use([Pagination,Navigation]);
 export default function ContinentCarousel() {
 
   const { continents } = useContinents()
-  console.log(continents)
 
   return (
     <>

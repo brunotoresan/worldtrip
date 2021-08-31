@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { useRouter } from "next/dist/client/router";
-import { useContinents } from '../../hooks/useContinents'
+import { useContinents } from "../../hooks/useContinents";
 
 interface City {
   image: string,
@@ -9,12 +9,11 @@ interface City {
   flag: string
 }
 
-interface Continent {
+interface ContinentWithCities {
   slug: string,
-  sliderImage: string,
   name: string,
-  slogan: string,
   banner: string,
+  description: string,
   countries: number,
   languages: number,
   citiesPlus100: number,
@@ -24,9 +23,9 @@ interface Continent {
 export default function Continent(){
 
   const { asPath } = useRouter()
-  const { continents } = useContinents()
-  console.log(continents)
-  // const continent = continents.filter(continent => continent.slug === asPath)
+  const { continentsWithCities } = useContinents()
+
+  const continent = continentsWithCities.filter(continent => asPath.endsWith(continent.slug))
 
   return (
     <Header />

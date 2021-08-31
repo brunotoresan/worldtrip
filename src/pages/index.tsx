@@ -7,12 +7,12 @@ import { ContinentsProvider } from '../hooks/useContinents';
 
 export default function Home() {
   return (
-    <ContinentsProvider>
+    <>
       <Header />
       <Banner />
       <TravelTypes />
       <ChooseYourContinent />
       <ContinentCarousel />
-    </ContinentsProvider>
+    </>
   )
 }

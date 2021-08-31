@@ -9,6 +9,7 @@ SwiperCore.use([Pagination,Navigation]);
 export default function ContinentCarousel() {
 
   const { continents } = useContinents()
+  console.log(continents)
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function ContinentCarousel() {
           {continents.map(continent => (
             <SwiperSlide key={continent.slug}>
               <Slide
-                continentImage={continent.sliderImage}
+                continentImage={continent.image}
                 continentSlug={continent.slug}
                 continentName={continent.name}
                 continentSlogan={continent.slogan} 

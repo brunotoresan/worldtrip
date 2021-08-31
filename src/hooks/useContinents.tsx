@@ -1,6 +1,13 @@
 import { createContext, useEffect, useState, ReactNode, useContext } from "react"
 import api from '../services/api'
 
+interface Continent {
+  slug: string,
+  image: string,
+  name: string,
+  slogan: string
+}
+
 interface City {
   image: string,
   name: string,
@@ -8,12 +15,11 @@ interface City {
   flag: string
 }
 
-interface Continent {
+interface ContinentWithCities {
   slug: string,
-  sliderImage: string,
   name: string,
-  slogan: string,
   banner: string,
+  description: string,
   countries: number,
   languages: number,
   citiesPlus100: number,
@@ -27,7 +33,8 @@ interface ContinentProviderProps {
 }
 
 interface ContinentContextData {
-  continents: Continent[]
+  continents: Continent[],
+  continentsWithCities: ContinentWithCities[]
 }
 
 // The provider property will make the context available for other components 
@@ -48,9 +55,21 @@ export function ContinentsProvider({ children }: ContinentProviderProps){
     loadContinents();
     }, []);
 
+    const [continentsWithCities, setContinentsWithCities] = useState<ContinentWithCities[]>([])
+
+    useEffect(() =>  {
+      async function loadContinentsWithCities() {
+        let response = await api.get<ContinentWithCities[]>('/continentsWithCities')
+                                .then(response => response.data)
+        setContinentsWithCities(response)
+    }
+
+    loadContinentsWithCities();
+    }, []);
+
   return (
     <ContinentsContext.Provider 
-      value={{ continents }}
+      value={{ continents, continentsWithCities }}
     >
       {children}
     </ContinentsContext.Provider>

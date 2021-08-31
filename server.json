@@ -2,10 +2,29 @@
   "continents": [
     {
       "slug": "europe",
-      "sliderImage": "/images/continents/europe/europe.png",
+      "image": "/images/continents/europe/europe.png",
       "name": "Europa",
-      "slogan": "O continente mais antigo.",
+      "slogan": "O continente mais antigo."
+    },
+    {
+      "slug": "oceania",
+      "image": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1961&q=80",
+      "name": "Oceania",
+      "slogan": "Onde a felicidade encontra você"
+    },
+    {
+      "slug": "north-america",
+      "image": "https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1434&q=80",
+      "name": "América do Norte",
+      "slogan": "Tudo ao seu alcançe"
+    }
+  ],
+  "continentsWithCities": [
+    {
+      "slug": "europe",
+      "name": "Europa",
       "banner": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80",
+      "description": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
       "countries": 50,
       "languages": 60,
       "citiesPlus100": 27,
@@ -27,15 +46,14 @@
           "name": "Roma",
           "country": "Itália",
           "flag": "/images/continents/europe/italy.svg"
-        }                  
+        }
       ] 
     },
     {
       "slug": "oceania",
-      "sliderImage": "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1961&q=80",
       "name": "Oceania",
-      "slogan": "Onde a felicidade encontra você",
       "banner": "https://images.unsplash.com/photo-1589330273594-fade1ee91647?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "description": "Oceania  é uma região geográfica composta por vários grupos de ilhas do oceano Pacífico (Polinésia, Melanésia e Micronésia). O termo é usado hoje em vários idiomas para designar uma região geográfica e política que compreende o continente da Austrália e ilhas do Oceano Pacífico adjacentes.",
       "countries": 14,
       "languages": 5,
       "citiesPlus100": 3,
@@ -57,15 +75,14 @@
           "name": "Auckland",
           "country": "Nova Zelândia",
           "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/320px-Flag_of_New_Zealand.svg.png"
-        }                  
+        }
       ] 
     },
     {
       "slug": "north-america",
-      "sliderImage": "https://images.unsplash.com/photo-1515896769750-31548aa180ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1434&q=80",
       "name": "América do Norte",
-      "slogan": "Tudo ao seu alcançe",
       "banner": "https://images.unsplash.com/photo-1566469942497-e061c2665e7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=908&q=80",
+      "description": "A América do Norte é um subcontinente que compreende a porção setentrional do continente americano. A América do Norte é apenas a parte mais setentrional da América, separada da América Central na fronteira entre o México e a Guatemala. É composta por três países: México, Estados Unidos, e Canadá",
       "countries": 3,
       "languages": 4,
       "citiesPlus100": 8,
@@ -99,8 +116,8 @@
           "name": "São Francisco",
           "country": "Estados Unidos",
           "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
-        }                                     
-      ] 
-    }        
-  ]
+        }
+      ]
+    }
+  ]  
 }

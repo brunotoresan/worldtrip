@@ -3,15 +3,16 @@ import { Header } from "../components/Header";
 import { TravelTypes } from "../components/TravelTypes";
 import { ChooseYourContinent } from "../components/ChooseYourContinent";
 import ContinentCarousel from "../components/ContinentCarousel";
+import { ContinentsProvider } from '../hooks/useContinents';
 
 export default function Home() {
   return (
-    <>
+    <ContinentsProvider>
       <Header />
       <Banner />
       <TravelTypes />
       <ChooseYourContinent />
       <ContinentCarousel />
-    </>
+    </ContinentsProvider>
   )
 }

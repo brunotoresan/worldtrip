@@ -2,10 +2,14 @@ import { Swiper, SwiperSlide  } from "swiper/react";
 import SwiperCore, { Pagination,Navigation } from 'swiper';
 import { Slide } from './Slide'
 import { Flex } from "@chakra-ui/react";
+import { useContinents } from '../../hooks/useContinents'
 
 SwiperCore.use([Pagination,Navigation]);
 
 export default function ContinentCarousel() {
+
+  const { continents } = useContinents()
+
   return (
     <>
       <Flex w='100%' h={['250px', '450px']} maxW='1240px' mx='auto' mb={["1.5rem", "2.5rem"]}>
@@ -20,18 +24,16 @@ export default function ContinentCarousel() {
             flex: '1'
           }}
         >
-          <SwiperSlide>América do Norte</SwiperSlide>
-          <SwiperSlide>América do Sul</SwiperSlide>
-          <SwiperSlide>Ásia</SwiperSlide>
-          <SwiperSlide>África</SwiperSlide>
-          <SwiperSlide>
-            <Slide 
-              continentImage="/images/continents/europe/europe.png"
-              continentName="Europa"
-              continentSlogan="O continente mais antigo." 
-            />
-          </SwiperSlide>
-          <SwiperSlide>Oceania</SwiperSlide>
+          {continents.map(continent => (
+            <SwiperSlide>
+              <Slide
+                key={continent.slug}
+                continentImage={continent.sliderImage}
+                continentName={continent.name}
+                continentSlogan={continent.slogan} 
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Flex>
     </>

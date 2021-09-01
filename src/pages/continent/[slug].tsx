@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { useRouter } from "next/dist/client/router";
 import { useContinents } from "../../hooks/useContinents";
+import { ContinentBanner } from "../../components/ContinentBanner";
 
 interface City {
   image: string,
@@ -24,10 +25,15 @@ export default function Continent(){
 
   const { asPath } = useRouter()
   const { continentsWithCities } = useContinents()
+  const continent = continentsWithCities.filter(continent => asPath.endsWith(continent.slug))[0]
 
-  const continent = continentsWithCities.filter(continent => asPath.endsWith(continent.slug))
+  console.log(asPath) // error because asPath becomes /continent/[slug]
+  console.log(continentsWithCities)
 
   return (
-    <Header />
+    <>
+      <Header />
+      <ContinentBanner banner={continent.banner} name={continent.name}/>
+    </>
   )
 }

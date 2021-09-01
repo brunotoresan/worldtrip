@@ -8,24 +8,6 @@ interface Continent {
   slogan: string
 }
 
-interface City {
-  image: string,
-  name: string,
-  country: string,
-  flag: string
-}
-
-interface ContinentWithCities {
-  slug: string,
-  name: string,
-  banner: string,
-  description: string,
-  countries: number,
-  languages: number,
-  citiesPlus100: number,
-  cities: City[]
-}
-
 interface ContinentProviderProps {
   // accepts all valid React data (e.g. jsx, html, text,...)
   // this enables the component ContinentProvider to have children elements
@@ -33,8 +15,7 @@ interface ContinentProviderProps {
 }
 
 interface ContinentContextData {
-  continents: Continent[],
-  continentsWithCities: ContinentWithCities[]
+  continents: Continent[]
 }
 
 // The provider property will make the context available for other components 
@@ -55,21 +36,9 @@ export function ContinentsProvider({ children }: ContinentProviderProps){
     loadContinents();
     }, []);
 
-    const [continentsWithCities, setContinentsWithCities] = useState<ContinentWithCities[]>([])
-
-    useEffect(() =>  {
-      async function loadContinentsWithCities() {
-        let response = await api.get<ContinentWithCities[]>('/continentsWithCities')
-                                .then(response => response.data)
-        setContinentsWithCities(response)
-    }
-
-    loadContinentsWithCities();
-    }, []);
-
   return (
     <ContinentsContext.Provider 
-      value={{ continents, continentsWithCities }}
+      value={{ continents }}
     >
       {children}
     </ContinentsContext.Provider>

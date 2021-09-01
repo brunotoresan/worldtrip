@@ -1,7 +1,7 @@
 import { Header } from "../../components/Header";
-import { useRouter } from "next/dist/client/router";
-import { useContinents } from "../../hooks/useContinents";
 import { ContinentBanner } from "../../components/ContinentBanner";
+import { GetStaticPaths, GetStaticProps } from "next";
+import api from "../../services/api";
 
 interface City {
   image: string,
@@ -21,14 +21,11 @@ interface ContinentWithCities {
   cities: City[]
 }
 
-export default function Continent(){
+interface ContinentProps {
+  continent: ContinentWithCities
+}
 
-  const { asPath } = useRouter()
-  const { continentsWithCities } = useContinents()
-  const continent = continentsWithCities.filter(continent => asPath.endsWith(continent.slug))[0]
-
-  console.log(asPath) // error because asPath becomes /continent/[slug]
-  console.log(continentsWithCities)
+export default function Continent({continent}: ContinentProps){
 
   return (
     <>
@@ -36,4 +33,24 @@ export default function Continent(){
       <ContinentBanner banner={continent.banner} name={continent.name}/>
     </>
   )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  
+  const { slug } = params
+  const response = await api.get(`/continentsWithCities?slug=${slug}`)
+  const continent: ContinentWithCities = response.data[0]
+
+  return {
+    props: {
+      continent
+    }
+  }
 }

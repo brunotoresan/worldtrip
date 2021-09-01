@@ -8,19 +8,23 @@ interface ContinentBanner {
 export function ContinentBanner({ banner, name }: ContinentBanner){
   return (
     <Flex
-      // w="100%"
-      // h={['150px', '500px']}
-      // bgImage={`url('${banner}')`}
-      // bgRepeat="no-repeat"
-      // bgPosition="center"
-      w='100%' 
-      h={['150px', '500px']}
+      w="100%"
+      h={["150px","300px","500px"]}
+      px={["0","0","36"]}
+      pt={["0","0","72"]}
       bgImage={`url('${banner}')`}
-      bgPosition={["50% 50%","50% 50%"]}
+      bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
+      align="center"
+      justify={["center","center", "flex-start"]}
     >
-      <Heading>
+      <Heading
+        textAlign={["center", "left"]}
+        fontSize={["1.75rem","3rem"]}
+        color="gray.50"
+        fontWeight="600"
+      >
         {name}
       </Heading>
     </Flex>

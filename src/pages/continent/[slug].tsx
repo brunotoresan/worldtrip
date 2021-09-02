@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header";
 import { ContinentBanner } from "../../components/ContinentBanner";
+import { ContinentInfo } from "../../components/ContinentInfo";
 import { GetStaticPaths, GetStaticProps } from "next";
 import api from "../../services/api";
 
@@ -10,7 +11,7 @@ interface City {
   flag: string
 }
 
-interface ContinentWithCities {
+export interface ContinentWithCities {
   slug: string,
   name: string,
   banner: string,
@@ -30,7 +31,8 @@ export default function Continent({continent}: ContinentProps){
   return (
     <>
       <Header />
-      <ContinentBanner banner={continent.banner} name={continent.name}/>
+      <ContinentBanner banner={continent.banner} name={continent.name} />
+      <ContinentInfo continent={continent} />
     </>
   )
 }

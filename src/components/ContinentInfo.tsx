@@ -9,13 +9,17 @@ interface ContinentProps {
 export function ContinentInfo({continent}: ContinentProps){
 
   return (
-    <SimpleGrid flex="1" minChildWidth="320px">
+    <SimpleGrid 
+      templateColumns={["1fr","1fr","1fr 1fr", "1fr 1fr"]} 
+      gap={[5, 10, 16, 20]} 
+      maxW="1160px" 
+      mx="auto"
+    >
       <Box mt={["1.5rem", "5rem"]}>
         <Text
-          maxW={["343px", "600px"]}
-          fontSize={['0.875rem', '1.5rem']}
-          align="justify"
-          ml="auto"
+          fontSize={["lg", "xl", "xl", "2xl"]}
+          textAlign="justify"
+          mx={["16px","16px","16px", "16px", "0px"]} 
         >
           {continent.description}
         </Text>

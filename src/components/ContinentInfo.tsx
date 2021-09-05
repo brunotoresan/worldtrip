@@ -1,5 +1,5 @@
 import { ContinentWithCities } from '../pages/continent/[slug]'
-import { SimpleGrid, Box, Text } from '@chakra-ui/react'
+import { SimpleGrid, Box, Text, Flex } from '@chakra-ui/react'
 import { ContinentStatistic } from './ContinentStatistic'
 
 interface ContinentProps {
@@ -24,16 +24,16 @@ export function ContinentInfo({continent}: ContinentProps){
           {continent.description}
         </Text>
       </Box>
-      <SimpleGrid
-        templateColumns={["1fr 1fr 1fr"]}
-        maxW="500px"
-        gap={"42px"}
-        mx="auto"
+      <Flex
+        alignItems="center"
+        justifyContent="space-between"
+        maxW={[null, null, null, "500px"]}
+        mx={["16px", "16px", "16px", "0px"]}
       >
         <ContinentStatistic statNumber={continent.countries} statName="países" />
         <ContinentStatistic statNumber={continent.languages} statName="línguas" />
         <ContinentStatistic statNumber={continent.citiesPlus100} statName="cidades +100" />
-      </SimpleGrid>
+      </Flex>
     </SimpleGrid>
   )
 }

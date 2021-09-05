@@ -30,9 +30,18 @@ export function ContinentInfo({continent}: ContinentProps){
         maxW={[null, null, null, "500px"]}
         mx={["16px", "16px", "16px", "0px"]}
       >
-        <ContinentStatistic statNumber={continent.countries} statName="países" />
-        <ContinentStatistic statNumber={continent.languages} statName="línguas" />
-        <ContinentStatistic statNumber={continent.citiesPlus100} statName="cidades +100" />
+        <ContinentStatistic 
+          statNumber={continent.countries} 
+          statName="países" 
+        />
+        <ContinentStatistic 
+          statNumber={continent.languages} 
+          statName="línguas" 
+        />
+        <ContinentStatistic 
+          statNumber={continent.citiesPlus100} 
+          statName="cidades +100" 
+        />
       </Flex>
     </SimpleGrid>
   )

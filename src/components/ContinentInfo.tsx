@@ -19,7 +19,8 @@ export function ContinentInfo({continent}: ContinentProps){
         <Text
           fontSize={["lg", "xl", "xl", "2xl"]}
           textAlign="justify"
-          mx={["16px","16px","16px", "16px", "0px"]} 
+          mx={["16px","16px","16px", "16px", "0px"]}
+          color="gray.700" 
         >
           {continent.description}
         </Text>
@@ -27,20 +28,21 @@ export function ContinentInfo({continent}: ContinentProps){
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        maxW={[null, null, null, "500px"]}
+        maxW={[null, null, null, "490px"]}
         mx={["16px", "16px", "16px", "0px"]}
       >
         <ContinentStatistic 
-          statNumber={continent.countries} 
-          statName="países" 
+          statNumber={continent.countries}
+          statName="países"
         />
         <ContinentStatistic 
-          statNumber={continent.languages} 
-          statName="línguas" 
+          statNumber={continent.languages}
+          statName="línguas"
         />
         <ContinentStatistic 
-          statNumber={continent.citiesPlus100} 
-          statName="cidades +100" 
+          statNumber={continent.citiesPlus100}
+          statName="cidades +100"
+          cities={continent.cities.map(city => city.name)}
         />
       </Flex>
     </SimpleGrid>

@@ -17,10 +17,10 @@ This is a traveling app where users can check continents, read about its descrip
 We will use JSON server to simulate a REST API that will make the data in the `server.json` file available in both the `http://localhost:3333/continents` and `http://localhost:3333/continentsWithCities` urls
 
 ## 👨🏽‍💻 About the challenge
-This was a challenge to implement a responsive traveling app through a figma layout. I developed the app with several cool technologies such as:
-- Chakra UI to create responsive interfaces for a great experience in both cellphones and computers
-- Next.JS framework to create a complete web application from React
-- Swiper to create to create a touch slider
+This was a challenge to implement a responsive traveling app interface from a figma layout. I developed the app with several cool technologies such as:
+- **Chakra UI** to create responsive interfaces for a great experience in both cellphones and computers
+- **Next.JS** framework to create a complete web application from React
+- **Swiper** to create a touch slider
 
 ## 💻 Installation and execution
 To install: `yarn install`<br>

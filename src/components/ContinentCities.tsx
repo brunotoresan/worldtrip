@@ -26,7 +26,7 @@ interface ContinentProps {
 export function ContinentCities({continent}: ContinentProps){
   return (
     <Flex direction="column" maxW="1160px" mx="auto" mt={["33px", "80px"]} mb={["1rem", "2.25rem"]} px="1rem">
-      <Heading color="gray.700" ml={["16px", "16px", "16px", "16px", "0px"]} fontWeight="500" fontSize={["1.5rem", "2.25rem"]}>
+      <Heading color="gray.700" fontWeight="500" fontSize={["1.5rem", "2.25rem"]}>
         Cidades +100
       </Heading>
       <Grid

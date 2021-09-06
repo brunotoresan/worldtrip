@@ -33,19 +33,19 @@
           "image": "/images/continents/europe/london.svg",
           "name": "Londres",
           "country": "Reino Unido",
-          "flag": "/images/continents/europe/greatBritain.svg"
+          "flag": "GB"
         },
         {
           "image": "/images/continents/europe/paris.svg",
           "name": "Paris",
           "country": "França",
-          "flag": "/images/continents/europe/france.svg"
+          "flag": "FR"
         },
         {
           "image": "/images/continents/europe/rome.svg",
           "name": "Roma",
           "country": "Itália",
-          "flag": "/images/continents/europe/italy.svg"
+          "flag": "IT"
         }
       ] 
     },
@@ -62,19 +62,19 @@
           "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80",
           "name": "Sydney",
           "country": "Austrália",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.svg.png"
+          "flag": "AU"
         },
         {
           "image": "https://images.unsplash.com/photo-1616408585022-4be4905b1e48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
           "name": "Melbourne",
           "country": "Austrália",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.svg.png"
+          "flag": "AU"
         },
         {
           "image": "https://images.unsplash.com/photo-1600208669687-f19af3638cb9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
           "name": "Auckland",
           "country": "Nova Zelândia",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/320px-Flag_of_New_Zealand.svg.png"
+          "flag": "NZ"
         }
       ] 
     },
@@ -91,31 +91,31 @@
           "image": "https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3033&q=80",
           "name": "Nova York",
           "country": "Estados Unidos",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+          "flag": "US"
         },
         {
           "image": "https://images.unsplash.com/photo-1603888613934-ee2f7d143dd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=668&q=80",
           "name": "Miami",
           "country": "Estados Unidos",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+          "flag": "US"
         },
         {
           "image": "https://images.unsplash.com/photo-1563503136947-cc262fa1e423?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80",
           "name": "Los Angeles",
           "country": "Estados Unidos",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+          "flag": "US"
         },
         {
           "image": "https://images.unsplash.com/photo-1503505129851-abaf7f6140b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=564&q=80",
           "name": "Toronto",
           "country": "Canadá",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg"
+          "flag": "CA"
         },
         {
           "image": "https://images.unsplash.com/photo-1616912059100-05fe643ee63d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80",
           "name": "São Francisco",
           "country": "Estados Unidos",
-          "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg"
+          "flag": "US"
         }
       ]
     }

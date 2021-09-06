@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { ContinentBanner } from "../../components/ContinentBanner";
 import { ContinentInfo } from "../../components/ContinentInfo";
+import { ContinentCities } from '../../components/ContinentCities'
 import { GetStaticPaths, GetStaticProps } from "next";
 import api from "../../services/api";
 
@@ -33,6 +34,7 @@ export default function Continent({continent}: ContinentProps){
       <Header />
       <ContinentBanner banner={continent.banner} name={continent.name} />
       <ContinentInfo continent={continent} />
+      <ContinentCities continent={continent} />
     </>
   )
 }

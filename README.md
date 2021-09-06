@@ -25,4 +25,4 @@ This was a challenge to implement a responsive traveling app interface from a fi
 ## 💻 Installation and execution
 To install: `yarn install`<br>
 To create fake API with JSON sevrer: `yarn server`<br>
-To run the React App: `yarn start`
+To run the React App: `yarn dev`
